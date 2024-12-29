@@ -1,0 +1,67 @@
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+}
+
+h1 {
+    text-align: center;
+    margin: 0;
+    font-size: 3rem;
+}
+
+h2 {
+    text-align: center;
+    margin: 10px 0 0;
+    font-size: 1rem;
+    color: #bbbbbb;
+}
+
+#japanese-word {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#latin-version {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #bbbbbb;
+    visibility: hidden; /* Keep space but hide the text */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}

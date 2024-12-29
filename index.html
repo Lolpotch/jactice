@@ -1,112 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Japanese Word Shuffle</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #1e1e1e;
-            color: #f0f0f0;
-        }
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Japanese Word Shuffle</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
 
-        h1 {
-            text-align: center;
-            margin: 0;
-            font-size: 3rem;
-        }
+    <body>
+        <div class="header">
+            <h1>Jactice</h1>
+            <h2>Japanese Practice - Click the Kana to reveal the latin version</h2>
+        </div>
+        <div class="center-content">
+            <div id="japanese-word">こんにちは</div>
+            <button onclick="shuffleWord()">Shuffle</button>
+            <div id="latin-version" style="visibility: hidden;">Konnichiwa</div>
+        </div>
+    </body>
 
-        h2 {
-            text-align: center;
-            margin: 10px 0 0;
-            font-size: 1rem;
-            color: #bbbbbb;
-        }
-
-        #japanese-word {
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-
-        #latin-version {
-            margin-top: 20px;
-            font-size: 1.2rem;
-            color: #bbbbbb;
-            visibility: hidden; /* Keep space but hide the text */
-        }
-
-        button {
-            padding: 10px 20px;
-            font-size: 1rem;
-            cursor: pointer;
-            border: none;
-            background-color: #007BFF;
-            color: white;
-            border-radius: 5px;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-
-        .center-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            flex-grow: 1;
-        }
-
-        .header {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-    </style>
-</head>
-<body>
-    <div class="header">
-        <h1>Jactice</h1>
-        <h2>Japanese Practice - Click the Kana to reveal the latin version</h2>
-    </div>
-    <div class="center-content">
-        <div id="japanese-word">こんにちは</div>
-        <button onclick="shuffleWord()">Shuffle</button>
-        <div id="latin-version" style="visibility: hidden;">Konnichiwa</div>
-    </div>
-
-    <script>
-        const words = [
-            { japanese: "こんにちは", latin: "Konnichiwa" },
-            { japanese: "ありがとう", latin: "Arigatou" },
-            { japanese: "さようなら", latin: "Sayounara" },
-            { japanese: "おはよう", latin: "Ohayou" },
-            { japanese: "すみません", latin: "Sumimasen" }
-        ];
-
-        function shuffleWord() {
-            const randomIndex = Math.floor(Math.random() * words.length);
-            const selectedWord = words[randomIndex];
-
-            document.getElementById('japanese-word').textContent = selectedWord.japanese;
-            const latinElement = document.getElementById('latin-version');
-            latinElement.textContent = selectedWord.latin;
-            latinElement.style.visibility = 'hidden'; // Keep space but hide the Latin word
-        }
-
-        document.getElementById('japanese-word').addEventListener('click', () => {
-            const latinElement = document.getElementById('latin-version');
-            latinElement.style.visibility = 'visible'; // Reveal the Latin word
-        });
-    </script>
-</body>
+    <script src="script.js"></script>
 </html>
