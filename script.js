@@ -3,7 +3,15 @@ const words = [
     { japanese: "ありがとう", latin: "Arigatou" },
     { japanese: "さようなら", latin: "Sayounara" },
     { japanese: "おはよう", latin: "Ohayou" },
-    { japanese: "すみません", latin: "Sumimasen" }
+    { japanese: "すみません", latin: "Sumimasen" },
+    { japanese: "あにめ", latin: "Anime" },
+    { japanese: "つなみ", latin: "Tsunami" },
+    { japanese: "とうふ", latin: "Toufu" },
+    { japanese: "さむらい", latin: "Samurai" },
+    { japanese: "かたな", latin: "Katana" },
+    { japanese: "やまは", latin: "Yamaha" },
+    { japanese: "みつびし", latin: "Mitsubishi" },
+    { japanese: "すし", latin: "Sushi" }
 ];
 
 function shuffleWord() {
