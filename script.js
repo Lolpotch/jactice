@@ -5,12 +5,14 @@ const words = [
     { japanese: "おはよう", latin: "Ohayou" },
     { japanese: "すみません", latin: "Sumimasen" },
     { japanese: "あにめ", latin: "Anime" },
-    { japanese: "つなみ", latin: "Tsunami" },
-    { japanese: "とうふ", latin: "Toufu" },
+    { japanese: "やまは", latin: "Yamaha" },
     { japanese: "さむらい", latin: "Samurai" },
     { japanese: "かたな", latin: "Katana" },
-    { japanese: "やまは", latin: "Yamaha" },
+    { japanese: "おりがみ", latin: "Origami" },
+    { japanese: "つなみ", latin: "Tsunami" },
     { japanese: "みつびし", latin: "Mitsubishi" },
+    { japanese: "わさび", latin: "Wasabi" },
+    { japanese: "とうふ", latin: "Toufu" },
     { japanese: "すし", latin: "Sushi" }
 ];
 
