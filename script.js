@@ -27,7 +27,10 @@ const words = [
     { japanese: "ひばち", latin: "Hibachi" },
     { japanese: "へりこぶた一", latin: "Herikoputa (Helicopter) (I know I should've used katakana here, but I'm not touching those letters yet in this page)" },
     { japanese: "ほてる", latin: "Hoteru (Hotel) (Yes, I know. No katakana in this page" },
-    { japanese: "ふろんと", latin: "Furonto (Front) (NO katakana here, thank you)" }
+    { japanese: "ふろんと", latin: "Furonto (Front) (NO katakana here, thank you)" },
+    { japanese: "ぬーどる", latin: "Nuudoru (Noodle) (YEP, no katakana)" },
+    { japanese: "てれび", latin: "Terebi (Television) (nO kAtaKAnA)" },
+    { japanese: "ねくれす", latin: "Nekuresu (Necklace)" }
 ];
 
 function shuffleWord() {
