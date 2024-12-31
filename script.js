@@ -1,7 +1,6 @@
 const words = [
     { japanese: "こんにちは", latin: "Konnichiwa" },
     { japanese: "ありがとう", latin: "Arigatou" },
-    { japanese: "さようなら", latin: "Sayounara" },
     { japanese: "おはよう", latin: "Ohayou" },
     { japanese: "すみません", latin: "Sumimasen" },
     { japanese: "あにめ", latin: "Anime" },
@@ -12,8 +11,23 @@ const words = [
     { japanese: "つなみ", latin: "Tsunami" },
     { japanese: "みつびし", latin: "Mitsubishi" },
     { japanese: "わさび", latin: "Wasabi" },
+    { japanese: "すし", latin: "Sushi" },
     { japanese: "とうふ", latin: "Toufu" },
-    { japanese: "すし", latin: "Sushi" }
+    { japanese: "そにい", latin: "Sonii (Sony)" },
+    { japanese: "ほんだ", latin: "Honda" },
+    { japanese: "てんぷら", latin: "Tenpura" },
+    { japanese: "さようなら", latin: "Sayounara" },
+    { japanese: "ときょう", latin: "Tokyou" },
+    { japanese: "じゅどう", latin: "Judou" },
+    { japanese: "にんじゃ", latin: "Ninja" },
+    { japanese: "せんせい", latin: "Sensei" },
+    { japanese: "さけ", latin: "Sake" },
+    { japanese: "きもの", latin: "Kimono" },
+    { japanese: "はいく", latin: "Haiku" },
+    { japanese: "ひばち", latin: "Hibachi" },
+    { japanese: "へりこぶた一", latin: "Herikoputa (Helicopter) (I know I should've used katakana here, but I'm not touching those letters yet in this page)" },
+    { japanese: "ほてる", latin: "Hoteru (Hotel) (Yes, I know. No katakana in this page" },
+    { japanese: "ふろんと", latin: "Furonto (Front) (NO katakana here, thank you)" }
 ];
 
 function shuffleWord() {
