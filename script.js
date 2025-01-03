@@ -1,5 +1,5 @@
 const words = [
-    { japanese: "こんにちは", latin: "Konnichiwa" },
+    { japanese: "こんにちは", latin: "Konnichiha (Konnichiwa)" },
     { japanese: "ありがとう", latin: "Arigatou" },
     { japanese: "おはよう", latin: "Ohayou" },
     { japanese: "すみません", latin: "Sumimasen" },
@@ -12,25 +12,25 @@ const words = [
     { japanese: "みつびし", latin: "Mitsubishi" },
     { japanese: "わさび", latin: "Wasabi" },
     { japanese: "すし", latin: "Sushi" },
-    { japanese: "とうふ", latin: "Toufu" },
+    { japanese: "とうふ", latin: "Toufu (Tofu)" },
     { japanese: "そにい", latin: "Sonii (Sony)" },
     { japanese: "ほんだ", latin: "Honda" },
     { japanese: "てんぷら", latin: "Tenpura" },
     { japanese: "さようなら", latin: "Sayounara" },
-    { japanese: "ときょう", latin: "Tokyou" },
-    { japanese: "じゅどう", latin: "Judou" },
-    { japanese: "にんじゃ", latin: "Ninja" },
+    { japanese: "ときょう", latin: "Tokyou (Tokyo)" },
+    { japanese: "じゅどう", latin: "Jyudou (Judo)" },
+    { japanese: "にんじゃ", latin: "Ninjya (Ninja)" },
     { japanese: "せんせい", latin: "Sensei" },
     { japanese: "さけ", latin: "Sake" },
     { japanese: "きもの", latin: "Kimono" },
     { japanese: "はいく", latin: "Haiku" },
     { japanese: "ひばち", latin: "Hibachi" },
-    { japanese: "へりこぶた一", latin: "Herikoputa (Helicopter) (I know I should've used katakana here, but I'm not touching those letters yet in this page)" },
-    { japanese: "ほてる", latin: "Hoteru (Hotel) (Yes, I know. No katakana in this page" },
-    { japanese: "ふろんと", latin: "Furonto (Front) (NO katakana here, thank you)" },
-    { japanese: "ぬーどる", latin: "Nuudoru (Noodle) (YEP, no katakana)" },
-    { japanese: "てれび", latin: "Terebi (Television) (nO kAtaKAnA)" },
-    { japanese: "ねくれす", latin: "Nekuresu (Necklace) (nO kAtaKAnA)" }
+    { japanese: "へりこぶた一", latin: "Herikoputa (Helicopter)" },
+    { japanese: "ほてる", latin: "Hoteru (Hotel)" },
+    { japanese: "ふろんと", latin: "Furonto (Front)" },
+    { japanese: "ぬーどる", latin: "Nuudoru (Noodle)" },
+    { japanese: "てれび", latin: "Terebi (Television)" },
+    { japanese: "ねくれす", latin: "Nekuresu (Necklace)" }
 ];
 
 function shuffleWord() {
