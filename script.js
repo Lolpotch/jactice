@@ -33,10 +33,25 @@ const words = [
     { japanese: "ねくれす", latin: "Nekuresu (Necklace)" }
 ];
 
-function shuffleWord() {
-    const randomIndex = Math.floor(Math.random() * words.length);
-    const selectedWord = words[randomIndex];
+let availableWords = [...words]; // Copy of the original array
+let usedWords = []; // To track used words
 
+function shuffleWord() {
+    if (availableWords.length === 0) {
+        // Reset when no words are left
+        availableWords = [...usedWords];
+        usedWords = [];
+        
+        // Debug :
+        // alert("All words have been used! Resetting the word pool."); // Optional visual feedback
+    }
+
+    // Get a random word from availableWords
+    const randomIndex = Math.floor(Math.random() * availableWords.length);
+    const selectedWord = availableWords.splice(randomIndex, 1)[0]; // Remove from availableWords
+    usedWords.push(selectedWord); // Add to usedWords
+
+    // Display the word
     document.getElementById('japanese-word').textContent = selectedWord.japanese;
     const latinElement = document.getElementById('latin-version');
     latinElement.textContent = selectedWord.latin;
