@@ -1,5 +1,5 @@
-const words = [
-    { japanese: "こんにちは", latin: "Konnichiwa" },
+const hiraganaWords = [
+    { japanese: "こんにちは", latin: "Konnichiha (Konnichiwa)" },
     { japanese: "ありがとう", latin: "Arigatou" },
     { japanese: "おはよう", latin: "Ohayou" },
     { japanese: "すみません", latin: "Sumimasen" },
@@ -12,38 +12,84 @@ const words = [
     { japanese: "みつびし", latin: "Mitsubishi" },
     { japanese: "わさび", latin: "Wasabi" },
     { japanese: "すし", latin: "Sushi" },
-    { japanese: "とうふ", latin: "Toufu" },
+    { japanese: "とうふ", latin: "Toufu (Tofu)" },
     { japanese: "そにい", latin: "Sonii (Sony)" },
     { japanese: "ほんだ", latin: "Honda" },
     { japanese: "てんぷら", latin: "Tenpura" },
     { japanese: "さようなら", latin: "Sayounara" },
-    { japanese: "ときょう", latin: "Tokyou" },
-    { japanese: "じゅどう", latin: "Judou" },
-    { japanese: "にんじゃ", latin: "Ninja" },
+    { japanese: "ときょう", latin: "Tokyou (Tokyo)" },
+    { japanese: "じゅどう", latin: "Jyudou (Judo)" },
+    { japanese: "にんじゃ", latin: "Ninjya (Ninja)" },
     { japanese: "せんせい", latin: "Sensei" },
     { japanese: "さけ", latin: "Sake" },
     { japanese: "きもの", latin: "Kimono" },
     { japanese: "はいく", latin: "Haiku" },
     { japanese: "ひばち", latin: "Hibachi" },
-    { japanese: "へりこぶた一", latin: "Herikoputa (Helicopter) (I know I should've used katakana here, but I'm not touching those letters yet in this page)" },
-    { japanese: "ほてる", latin: "Hoteru (Hotel) (Yes, I know. No katakana in this page" },
-    { japanese: "ふろんと", latin: "Furonto (Front) (NO katakana here, thank you)" },
-    { japanese: "ぬーどる", latin: "Nuudoru (Noodle) (YEP, no katakana)" },
-    { japanese: "てれび", latin: "Terebi (Television) (nO kAtaKAnA)" },
-    { japanese: "ねくれす", latin: "Nekuresu (Necklace) (nO kAtaKAnA)" }
+    { japanese: "へりこぶた一", latin: "Herikoputa (Helicopter)" },
+    { japanese: "ほてる", latin: "Hoteru (Hotel)" },
+    { japanese: "ふろんと", latin: "Furonto (Front)" },
+    { japanese: "ぬーどる", latin: "Nuudoru (Noodle)" },
+    { japanese: "てれび", latin: "Terebi (Television)" },
+    { japanese: "ねくれす", latin: "Nekuresu (Necklace)" }
 ];
 
-function shuffleWord() {
-    const randomIndex = Math.floor(Math.random() * words.length);
-    const selectedWord = words[randomIndex];
+const katakanaWords = [
+    { japanese: "カタカナ", latin: "Katakana" },
+    { japanese: "テレビ", latin: "Terebi (Television)" },
+    { japanese: "ホテル", latin: "Hoteru (Hotel)" },
+    { japanese: "ヌードル", latin: "Nuudoru (Noodle)" },
+    // Add more Katakana words
+];
 
-    document.getElementById('japanese-word').textContent = selectedWord.japanese;
-    const latinElement = document.getElementById('latin-version');
-    latinElement.textContent = selectedWord.latin;
-    latinElement.style.visibility = 'hidden'; // Keep space but hide the Latin word
+let isHiraganaMode = true;
+let availableWords = [...hiraganaWords]; // Start with Hiragana
+let usedWords = []; // To track used words
+
+// Button references
+const hiraganaButton = document.getElementById("hiragana-button");
+const katakanaButton = document.getElementById("katakana-button");
+
+function toggleMode() {
+    if (isHiraganaMode) {
+        isHiraganaMode = false;
+        hiraganaButton.disabled = false;
+        katakanaButton.disabled = true;
+        availableWords = [...katakanaWords];
+    } else {
+        isHiraganaMode = true;
+        hiraganaButton.disabled = true;
+        katakanaButton.disabled = false;
+        availableWords = [...hiraganaWords];
+    }
+    usedWords = []; // Reset usedWords when switching modes
+    shuffleWord(); // Shuffle to display the first word in the new mode
 }
 
-document.getElementById('japanese-word').addEventListener('click', () => {
-    const latinElement = document.getElementById('latin-version');
-    latinElement.style.visibility = 'visible'; // Reveal the Latin word
+function shuffleWord() {
+    if (availableWords.length === 0) {
+        // Reset when no words are left
+        availableWords = isHiraganaMode ? [...hiraganaWords] : [...katakanaWords];
+        usedWords = [];
+
+        // alert("All words have been used! Resetting the word pool.");
+    }
+
+    // Get a random word from availableWords
+    const randomIndex = Math.floor(Math.random() * availableWords.length);
+    const selectedWord = availableWords.splice(randomIndex, 1)[0]; // Remove from availableWords
+    usedWords.push(selectedWord); // Add to usedWords
+
+    // Display the word
+    document.getElementById("japanese-word").textContent = selectedWord.japanese;
+    const latinElement = document.getElementById("latin-version");
+    latinElement.textContent = selectedWord.latin;
+    latinElement.style.visibility = "hidden"; // Keep space but hide the Latin word
+}
+
+document.getElementById("japanese-word").addEventListener("click", () => {
+    const latinElement = document.getElementById("latin-version");
+    latinElement.style.visibility = "visible"; // Reveal the Latin word
 });
+
+hiraganaButton.addEventListener("click", toggleMode);
+katakanaButton.addEventListener("click", toggleMode);
