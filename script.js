@@ -42,6 +42,20 @@ const katakanaWords = [
     { japanese: "テレビ", latin: "Terebi (Television)" },
     { japanese: "ホテル", latin: "Hoteru (Hotel)" },
     { japanese: "ヌードル", latin: "Nuudoru (Noodle)" },
+    { japanese: "ウカキヘ", latin: "Ukakihe" },
+    { japanese: "リモヤニ", latin: "Rimoyani" },
+    { japanese: "セケコラ", latin: "Sekekora" },
+    { japanese: "トレナモ", latin: "Torenamo" },
+    { japanese: "ケ-キ", latin: "Keeki (Cake)" },
+    { japanese: "カラオケ", latin: "Karaoke" },
+    { japanese: "イタリア", latin: "Itaria (Italia)" },
+    { japanese: "アメリカ", latin: "Amerika (America)" },
+    { japanese: "アメリカ", latin: "Amerika (America)" },
+    { japanese: "アメリカ", latin: "Amerika (America)" },
+    { japanese: "アメリカ", latin: "Amerika (America)" },
+    { japanese: "アメリカ", latin: "Amerika (America)" },
+    { japanese: "アメリカ", latin: "Amerika (America)" },
+    { japanese: "アメリカ", latin: "Amerika (America)" },
     // Add more Katakana words
 ];
 
