@@ -51,10 +51,8 @@ const katakanaWords = [
     { japanese: "アメリカ", latin: "Amerika (America)" },
     { japanese: "ドイツ", latin: "Doitsu (Deutsch)" },
     { japanese: "サッカー", latin: "Sakaa (Soccer)" },
-    { japanese: "アメリカ", latin: "Amerika (America)" },
-    { japanese: "アメリカ", latin: "Amerika (America)" },
-    { japanese: "アメリカ", latin: "Amerika (America)" },
-    { japanese: "アメリカ", latin: "Amerika (America)" },
+    { japanese: "カヌー", latin: "Kanuu (Kano)" },
+    { japanese: "チェス", latin: "Chiesu (Chess)" },
     // Add more Katakana words
 ];
 
